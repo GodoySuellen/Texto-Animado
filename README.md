@@ -38,3 +38,9 @@
 
 })()
 ```
+3. Não esqueça de importar os arquivos no seu `index.html`
+
+# Voilà
+![animate](texto_animado.gif)
+
+
