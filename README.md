@@ -4,7 +4,7 @@
 
 1. Copie para seu repositório os arquivos disponíveis nesta pasta: `assets/vendor/typed.js/typed.min.js`
 2. No seu arquivo `main.js` adicone a função: 
-```json 
+``` 
 (function() {
   "use strict";
   
