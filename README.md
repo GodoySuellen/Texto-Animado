@@ -1,3 +1,5 @@
+![animate](./assets/img/texto_animado.gif)
+
 ## Texto Animado
 
 ### Dependências
@@ -40,7 +42,7 @@
 ```
 3. Não esqueça de importar os arquivos no seu `index.html`
 
-# Voilà
-![animate](texto_animado.gif)
+
+
 
 
