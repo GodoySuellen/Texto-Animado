@@ -25,9 +25,7 @@
    */
   const typed = select(".typed");
   if (typed) {
-    console.log(typed)
     let typed_strings = typed.getAttribute("data-typed-items");
-    console.log(typed_strings)
     typed_strings = typed_strings.split(",");
     new Typed(".typed", {
       strings: typed_strings,
