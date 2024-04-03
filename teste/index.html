@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+   <!-- Bibliotecas Externas-->   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+   <style>
+
+
+      
+@keyframes slide {
+          0%  {
+              transform: scale(0, 0) translateY(0);
+          }
+          
+          15%, 70% {
+              transform: scale(1, 1) translateY(0);
+          }
+          
+          90% {
+              transform: scale(1, 1) translateY(600%);
+          }
+          
+          100% {
+              transform: scale(1, 1) translateY(600%);
+          }
+      }
+      
+      @keyframes size {
+          0%, 15%  {
+              transform: scale(1, 0);
+          }
+          
+          25%, 100% {
+              transform: scale(1, 1);
+          }
+      }
+      
+      @keyframes zoom {
+          0%, 25%  {
+              transform: scale(0, 0);
+          }
+          
+          35%, 100% {
+              transform: scale(1, 1);
+          }
+      }
+
+      html {
+          height: 100%;
+      }
+
+      body {    
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-self: center;
+        margin: 0;
+        background: #f6822fc3;
+      }
+
+        .wrap {
+          width: 100%;
+          height: 100vh;
+          display: table;
+          overflow: hidden;
+          position: absolute;
+          margin: auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      }
+      
+      .apps {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+      }
+      
+      .app {
+          width: 150px;
+          height: 150px;
+          background: #fff;
+          box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .08);
+          display: inline-block;
+          margin: 0 10px;
+      
+          transform: scale(0, 0) translateY(0);
+          
+          animation-name: slide;
+          animation-timing-function: ease;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          
+          &:nth-child(2), &:nth-child(2) .top, &:nth-child(2) .fa {
+              animation-delay: .2s;
+          }
+          &:nth-child(3), &:nth-child(3) .top, &:nth-child(3) .fa {
+              animation-delay: .4s;
+          }
+          &:nth-child(4), &:nth-child(4) .top, &:nth-child(4) .fa {
+              animation-delay: .6s;
+          }
+          &:nth-child(5), &:nth-child(5) .top, &:nth-child(5) .fa {
+              animation-delay: .8s;
+          }
+          
+          .top {
+              height: 39px;
+              position: relative;
+              
+              transform: scale(1, 0);
+              transform-origin: 0 0;
+              
+              animation-name: size;
+              animation-duration: 4s;
+              animation-timing-function: ease;
+              animation-iteration-count: infinite;
+              
+              .fa {
+                  height: 29px;
+                  width: 29px;
+                  line-height: 19px;
+                  text-align: center;
+                  font-size: 11px;
+                  color: #fff;
+                  border-radius: 50%;
+                  position: absolute;
+                  right: 5px;
+                  top: -9px;
+                  box-shadow: 1px 1px 1px .5px rgba(0, 0, 0, .08);
+                  
+                  animation-name: zoom;
+                  animation-duration: 4s;
+                  animation-iteration-count: infinite;
+              }
+          }
+          
+          &.yellow .top {
+              background: #F28F00;
+              color: #FFF;
+              padding: 5%;
+              .fa {
+                  background: #FFCC3B
+              }
+          }
+          
+          &.red .top {
+              background: #EA4301;
+              .fa {
+                  background: #FF8963
+              }
+          }
+          
+          &.blue .top {
+              background: #1E3F9C;
+              .fa {
+                  background: #74B0F8
+              }
+          }
+          
+          &.green .top {
+              background: #669930;
+              .fa {
+                  background: #B0D583
+              }
+          }
+          
+          &.pink .top {
+              background: #BD0E53;
+              .fa {
+                  background: #FF4082
+              }
+          }
+      }
+
+   </style>
+
+</head>
+
+
+
+<body>
+
+  
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center">
+
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row">
+        <div class="col-xl-6">
+          <img src="https://azsolucoes.com.br/assets/img/logos/logo.webp">
+          
+        </div>
+        <div class="col">
+          <h6 class="display-6">API de Integração de Leads Bitrix</h6>
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+  
+  <div class="wrap">
+    <div class="apps">
+      <div class="app yellow">
+        <div class="top">
+          <!--p>Teste</p-->
+          <div class="fa fa-heart"></div>
+        </div>
+      </div>
+      <div class="app red">
+        <div class="top">
+          <div class="fa fa-headphones"></div>
+        </div>
+      </div>
+      <div class="app blue"> 
+        <div class="top">
+          <div class="fa fa-cutlery"></div>
+        </div>
+      </div>
+      <div class="app green">
+        <div class="top">
+          <div class="fa fa-check"></div>
+        </div>
+      </div>
+      <div class="app pink">
+        <div class="top">
+          <div class="fa fa-home"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
